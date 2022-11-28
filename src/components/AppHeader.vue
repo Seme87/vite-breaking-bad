@@ -6,22 +6,20 @@ export default {
 
 <template>
   <header>
-    <div class="logo-title d-flex align-items-start p-3">
-      <div class="logo col-1 align-self-end">
+    <div class="logo-title align-items-end d-flex p-3 mb-4">
+      <div class="logo col-1">
         <img src="../assets/logo.png" alt="" />
       </div>
-      <h2 class="col align-self-end mx-2">Breaking Bad Api</h2>
+      <h2 class="col mx-2">Breaking Bad Api</h2>
     </div>
   </header>
 </template>
 
 <style lang="scss" scoped>
 img {
-  max-width: 100%;
+  max-width: 90%;
 }
-.logo {
-  height: 50px;
-}
+
 .logo-title {
   color: white;
 }
