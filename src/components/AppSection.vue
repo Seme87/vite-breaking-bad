@@ -30,7 +30,7 @@ export default {
       <div class="content">
         <AppCard
           v-for="character in characters"
-          class="ms-card"
+          class="ms-card p-2"
           :info="character"
         />
       </div>
@@ -51,7 +51,7 @@ export default {
 
 .ms-card {
   background-color: #2e3a46;
-  margin: 10px 10px;
-  width: calc(100% / 5 - 20px);
+  margin: 10px 5px;
+  width: calc(100% / 5 - 10px);
 }
 </style>

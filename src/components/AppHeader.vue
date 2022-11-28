@@ -17,7 +17,11 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  max-width: 90%;
+  max-width: 100%;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 .logo-title {
