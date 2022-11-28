@@ -25,12 +25,15 @@ export default {
 <template>
   <section class="section py-5 px-5">
     <AppFaund class="banner mb-3" />
-    <div class="row row-cols-5 justify-content-center px-2 py-3 g-3 gx-3">
-      <AppCard
-        v-for="character in characters"
-        class="col p-2 ms-card"
-        :info="character"
-      />
+
+    <div class="container">
+      <div class="content">
+        <AppCard
+          v-for="character in characters"
+          class="ms-card"
+          :info="character"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -40,7 +43,15 @@ export default {
   background-color: white;
 }
 
+.content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .ms-card {
   background-color: #2e3a46;
+  margin: 10px 10px;
+  width: calc(100% / 5 - 20px);
 }
 </style>
