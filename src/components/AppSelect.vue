@@ -1,16 +1,21 @@
 <script>
+
+import { store } from "../store.js"
 export default {
   name: "AppSelect",
+  data() {
+    return {
+      store
+    }
+  }
 };
 </script>
 
 <template>
   <div class="mb-4 px-3 d-flex">
-    <select class="ms-form form-select">
-      <option selected>Select Category</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+    <select class="ms-form form-select" @change="$emit('search')" v-model="store.statusValue">
+      <option value="Breaking Bad">Breaking Bad</option>
+      <option value="Better Call Saul">Better Call Saul</option>
     </select>
   </div>
 </template>

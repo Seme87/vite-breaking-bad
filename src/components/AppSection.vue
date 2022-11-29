@@ -1,5 +1,7 @@
 <script>
-import axios from "axios";
+
+import {store} from "../store.js"
+
 import AppFaund from "./AppFaund.vue";
 import AppCard from "./AppCard.vue";
 export default {
@@ -10,26 +12,23 @@ export default {
   },
   data() {
     return {
-      characters: [],
+      store,
+      
     };
   },
-  created() {
-    axios.get("https://www.breakingbadapi.com/api/characters").then((resp) => {
-      console.log(resp.data);
-      this.characters = resp.data;
-    });
-  },
+  
 };
 </script>
 
 <template>
   <section class="section py-5 px-5">
+    {{store.statusValue}}
     <AppFaund class="banner mb-3" />
 
     <div class="container">
       <div class="content">
         <AppCard
-          v-for="character in characters"
+          v-for="character in store.characters"
           class="ms-card p-2"
           :info="character"
         />
