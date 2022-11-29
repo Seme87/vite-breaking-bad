@@ -22,7 +22,7 @@ export default {
 
 <template>
   <section class="section py-5 px-5">
-    {{store.statusValue}}
+    
     <AppFaund class="banner mb-3" />
 
     <div class="container">
